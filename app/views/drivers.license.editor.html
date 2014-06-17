@@ -1,0 +1,58 @@
+<div ng-controller="DriversLicenseEditorController" class="drivers-license-editor">
+	
+
+	<div class="span5">
+		<a href class="image" ng-click="pickImage()">
+			<img ng-src="{{model.value.image}}" />
+		</a>
+	</div>	
+
+	<div class="span7">
+		
+		<div class="row">
+			<small>Full name</small>
+			<input type="text" ng-model="model.value.name" />
+		</div>
+
+		<div class="row">
+			<small>License number</small>
+			<input type="text" class="float-right" ng-model="model.value.licenseNumber" />
+		</div>
+
+		<div class="row">
+			<small>Registration date</small>
+			<div class="btn-group">
+			  <a class="btn btn-link dropdown-toggle" 
+			  		data-toggle="dropdown" href="#">
+			    		{{model.value.year}}
+			    	<span class="caret"></span>
+			  </a>
+			  <ul class="dropdown-menu">
+			  	<li ng-repeat="year in years">
+			  		<a href ng-click="setYear(year)">
+			  			{{year}}
+			  		</a>
+			  	</li>
+			  </ul>
+			</div>
+
+			/
+
+			<div class="btn-group">
+			  <a class="btn btn-link dropdown-toggle" 
+			  		data-toggle="dropdown" href="#">
+			    		{{model.value.month}}
+			    	<span class="caret"></span>
+			  </a>
+			  <ul class="dropdown-menu">
+			  	<li ng-repeat="month in months">
+			  		<a href ng-click="setMonth(month)">
+			  			{{month}}
+			  		</a>
+			  	</li>
+			  </ul>
+			</div>
+
+		</div>
+	</div>	
+</div>

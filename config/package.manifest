@@ -1,0 +1,29 @@
+{
+  "propertyEditors": [
+    {
+      "name": "Drivers License Editor",
+      "alias": "DriversLicenseEditor",
+      "editor": {
+        "valueType": "JSON",
+        "view": "~/App_Plugins/DriversLicenseEditor/views/drivers.license.editor.html"
+      },
+      "prevalues": {
+        "fields": [
+          {
+            "description": "This is an example prevalue",
+            "key": "examplePreValue",
+            "label": "Example PreValue",
+            "view": "textstring"
+          }
+        ]
+      }
+    }
+  ],
+  "css": [
+    "~/App_Plugins/DriversLicenseEditor/css/drivers.license.editor.css"
+  ],
+  "javascript": [
+    "~/App_Plugins/DriversLicenseEditor/js/drivers.license.editor.js"
+  ]
+}
+
